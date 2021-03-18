@@ -16,11 +16,11 @@ class Game extends Phaser.Scene {
     this.anims.create({
       key: 'hero-running',
       frames: this.anims.generateFrameNumbers('hero-run-sheet'),
-      frameRate: 10,
+      frameRate: 12,
       repeat: -1
     })
 
-    this.player = this.add.sprite(400, 300, 'hero-run-sheet')
+    this.player = this.physics.add.sprite(400, 300, 'hero-run-sheet')
     this.player.anims.play('hero-running')
   }
 
